@@ -10,11 +10,47 @@ import org.example.day8.Animal;
 import org.example.day8.Bird;
 import org.example.day8.Cat;
 import org.example.day8.Dog;
+import org.example.funny.Solution;
+import org.example.day9.*;
+import org.example.day10.*;
 
+import java.io.IOException;
+
+import static org.example.day10.ExceptionDemo.*;
 
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        System.out.println("=== 1. 基本try-catch ===");
+        tryCatchBasic();
+
+        System.out.println("\n=== 2. 多种异常捕获 ===");
+        mutipleCatch();
+
+        System.out.println("\n=== 3. finally执行顺序 ===");
+        finallyTest();
+
+        System.out.println("\n=== 4. return与finally ===");
+        System.out.println("testReturn结果：" + testReturn());
+
+        System.out.println("\n=== 5. throws声明 ===");
+        try {
+            readFile("不存在的文件.txt");
+        } catch (IOException e) {
+            System.out.println("读取失败：" + e.getMessage());
+        }
+
+        System.out.println("\n=== 6. throw主动抛出 ===");
+        try {
+            divide(10, 0);
+        } catch (ArithmeticException e) {
+            System.out.println("计算错误：" + e.getMessage());
+        }
+
+        System.out.println("\n=== 7. 异常信息获取 ===");
+        printException();
+//        StringPractice stringPractice = new StringPractice();
 //        caculate caculate=new caculate();
 //        caculate.caculate(args);
 //        scores scores=new scores();
@@ -54,31 +90,49 @@ public class Main {
 //        prinrtIntroduce(new Person());
 //        prinrtIntroduce(new Teacher());
 
-        Animal animal = new Dog("旺财");
-        Animal animal1=new Cat("咪咪");
-        Animal animal2=new Bird("小燕子");
-        animal1.speak();
-        animal2.speak();
-        animal.speak();
-        animal1.eat();
-        animal2.eat();
-        makeAnimalsSpeak(animal);
-        makeAnimalsSpeak(animal1);
-        makeAnimalsSpeak(animal2);
-        Animal animal3=new Dog("来福");
-        Animal animal4=new Cat("小花");
-        if (animal3 instanceof Dog){
-            Dog dog=(Dog)animal3;
-            dog.speak();
-        }
-        if (animal4 instanceof Dog){
-            Dog dog1=(Dog)animal3;
-            dog1.speak();
-        }
-    }
+//        Animal animal = new Dog("旺财");
+//        Animal animal1=new Cat("咪咪");
+//        Animal animal2=new Bird("小燕子");
+//        animal1.speak();
+//        animal2.speak();
+//        animal.speak();
+//        animal1.eat();
+//        animal2.eat();
+//        makeAnimalsSpeak(animal);
+//        makeAnimalsSpeak(animal1);
+//        makeAnimalsSpeak(animal2);
+//        Animal animal3=new Dog("来福");
+//        Animal animal4=new Cat("小花");
+//        if (animal3 instanceof Dog){
+//            Dog dog=(Dog)animal3;
+//            dog.speak();
+//        }
+//        if (animal4 instanceof Dog){
+//            Dog dog1=(Dog)animal3;
+//            dog1.speak();
+//        }
+//    }
+//        //两数之和
+        Solution solution=new Solution();
+//        int[] nums=new int[]{2,7,11,15,56,99,12};
+//        int target=127;
+//        int[] result = solution.twoSum(nums, target);
+//        System.out.println(result[0]+" "+result[1]);
+
 //    public static void prinrtIntroduce(Person p){
 //        p.introduce("zhaddd");
-//    }
+
+//        回文数
+//       boolean result= solution.isPalindrome(0);
+//       System.out.println(result);
+//       String s= "LVIII";
+//       int total=solution.romanToInt(s);
+//       System.out.println(total);
+
+    }
+
+
+
     public static void makeAnimalsSpeak(Animal animal){
         System.out.println(animal.getName()+"说");
         animal.speak();
