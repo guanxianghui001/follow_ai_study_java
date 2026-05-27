@@ -1,5 +1,6 @@
 //package org.example;
 package org.example;
+import org.example.day11.ArrayListDemo;
 import org.example.day4.BinarySearch;
 import org.example.day4.BubbleSort;
 import org.example.day5.Fibonaci;
@@ -17,39 +18,41 @@ import org.example.day10.*;
 import java.io.IOException;
 
 import static org.example.day10.ExceptionDemo.*;
+import static org.example.day11.ArrayListDemo.*;
 
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("=== 1. 基本try-catch ===");
-        tryCatchBasic();
-
-        System.out.println("\n=== 2. 多种异常捕获 ===");
-        mutipleCatch();
-
-        System.out.println("\n=== 3. finally执行顺序 ===");
-        finallyTest();
-
-        System.out.println("\n=== 4. return与finally ===");
-        System.out.println("testReturn结果：" + testReturn());
-
-        System.out.println("\n=== 5. throws声明 ===");
-        try {
-            readFile("不存在的文件.txt");
-        } catch (IOException e) {
-            System.out.println("读取失败：" + e.getMessage());
-        }
-
-        System.out.println("\n=== 6. throw主动抛出 ===");
-        try {
-            divide(10, 0);
-        } catch (ArithmeticException e) {
-            System.out.println("计算错误：" + e.getMessage());
-        }
-
-        System.out.println("\n=== 7. 异常信息获取 ===");
-        printException();
+        ArrayListDemo.getArray1();
+//        System.out.println("=== 1. 基本try-catch ===");
+//        tryCatchBasic();
+//
+//        System.out.println("\n=== 2. 多种异常捕获 ===");
+//        mutipleCatch();
+//
+//        System.out.println("\n=== 3. finally执行顺序 ===");
+//        finallyTest();
+//
+//        System.out.println("\n=== 4. return与finally ===");
+//        System.out.println("testReturn结果：" + testReturn());
+//
+//        System.out.println("\n=== 5. throws声明 ===");
+//        try {
+//            readFile("不存在的文件.txt");
+//        } catch (IOException e) {
+//            System.out.println("读取失败：" + e.getMessage());
+//        }
+//
+//        System.out.println("\n=== 6. throw主动抛出 ===");
+//        try {
+//            divide(10, 0);
+//        } catch (ArithmeticException e) {
+//            System.out.println("计算错误：" + e.getMessage());
+//        }
+//
+//        System.out.println("\n=== 7. 异常信息获取 ===");
+//        printException();
 //        StringPractice stringPractice = new StringPractice();
 //        caculate caculate=new caculate();
 //        caculate.caculate(args);
